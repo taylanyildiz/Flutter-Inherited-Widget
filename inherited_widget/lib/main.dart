@@ -18,13 +18,11 @@ class MyApp extends StatelessWidget {
     return StateWidget(
       child: Builder(
         builder: (context) {
-          final provider = StateInheritedWidget.of(context).state;
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: ThemeData(
               primarySwatch: Colors.blue,
-              scaffoldBackgroundColor: provider.backgroundColor,
             ),
             home: HomeScreen(title: 'Flutter Demo Home Page'),
           );

@@ -21,14 +21,15 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final counter = StateInheritedWidget.of(context).state.counter;
+    final provider = StateInheritedWidget.of(context).state;
     return Scaffold(
+      backgroundColor: provider.backgroundColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '$counter',
+              '${provider.counter}',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 30.0,
