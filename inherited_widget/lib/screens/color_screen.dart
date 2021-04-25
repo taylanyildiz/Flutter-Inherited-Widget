@@ -18,14 +18,20 @@ class ColorScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            buildColorButton(context, Colors.green),
-            buildColorButton(context, Colors.orange),
-            buildColorButton(context, Colors.red),
-            buildColorButton(context, Colors.blue),
-          ],
+        child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 30.0),
+          color: Colors.white,
+          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              buildColorButton(context, Colors.green),
+              buildColorButton(context, Colors.orange),
+              buildColorButton(context, Colors.red),
+              buildColorButton(context, Colors.blue),
+            ],
+          ),
         ),
       ),
     );
